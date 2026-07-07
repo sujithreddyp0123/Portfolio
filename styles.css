@@ -241,7 +241,7 @@ h3 { font-size: 22px; }
   gap: 64px;
   padding: 92px 0;
 }
-.prose p, .timeline-card p, .project-card p, .github-card p, .testimonials p {
+.prose p, .timeline-card p, .project-card p, .github-card p {
   color: var(--muted);
   line-height: 1.75;
 }
@@ -255,7 +255,7 @@ h3 { font-size: 22px; }
   gap: 12px;
   padding-bottom: 86px;
 }
-.metrics article, .timeline-card, .project-card, .diagram-card, .skills-grid article, .github-card, .testimonials, .contact {
+.metrics article, .timeline-card, .project-card, .diagram-card, .skills-grid article, .github-card, .contact {
   border: 1px solid var(--line);
   border-radius: 22px;
   background: var(--panel);
@@ -386,6 +386,7 @@ h3 { font-size: 22px; }
 .github-grid { grid-template-columns: 1fr 1.2fr; }
 .github-card { transition: 180ms ease; }
 .github-card.graph { grid-column: span 1; }
+.github-card.repo-feed { grid-column: 1 / -1; }
 .github-card img {
   width: 100%;
   min-height: 120px;
@@ -393,11 +394,34 @@ h3 { font-size: 22px; }
   border-radius: 14px;
   background: #020617;
 }
-.testimonials {
+.repo-list {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 32px;
-  margin-top: 92px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.repo-item {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(2, 6, 23, 0.48);
+  padding: 16px;
+}
+.repo-item h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.repo-item p {
+  min-height: 48px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--soft);
+  font-size: 12px;
+  font-weight: 800;
 }
 .contact {
   display: grid;
@@ -464,10 +488,10 @@ footer {
 
 @media (max-width: 980px) {
   .nav-links { display: none; }
-  .hero, .split, .testimonials, .contact { grid-template-columns: 1fr; }
+  .hero, .split, .contact { grid-template-columns: 1fr; }
   .architecture-hero { min-height: 360px; }
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .skills-grid, .project-grid, .architecture-grid, .github-grid { grid-template-columns: 1fr; }
+  .skills-grid, .project-grid, .architecture-grid, .github-grid, .repo-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
   .hero { padding-top: 128px; }
