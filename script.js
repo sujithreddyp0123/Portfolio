@@ -3,6 +3,12 @@ const sections = sectionLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 const backToTop = document.querySelector(".back-to-top");
+const repoList = document.querySelector("[data-repo-list]");
+const year = document.querySelector("[data-year]");
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
 function updateProgress() {
   const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -81,3 +87,48 @@ document.querySelectorAll("[data-expand]").forEach((button) => {
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+async function loadGitHubRepos() {
+  if (!repoList) return;
+
+  try {
+    const response = await fetch("https://api.github.com/users/sujithreddyp0123/repos?sort=updated&per_page=6");
+    if (!response.ok) throw new Error("GitHub request failed");
+    const repos = await response.json();
+    const visibleRepos = repos.filter((repo) => !repo.fork).slice(0, 3);
+
+    repoList.innerHTML = visibleRepos
+      .map((repo) => {
+        const description = repo.description || "Production-minded engineering work and experiments.";
+        const language = repo.language || "Code";
+        const updated = new Date(repo.updated_at).toLocaleDateString(undefined, {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        });
+
+        return `
+          <a class="repo-item" href="${repo.html_url}" target="_blank" rel="noreferrer">
+            <h4>${repo.name}</h4>
+            <p>${description}</p>
+            <span class="repo-meta">
+              <span>${language}</span>
+              <span>${repo.stargazers_count} stars</span>
+              <span>Updated ${updated}</span>
+            </span>
+          </a>
+        `;
+      })
+      .join("");
+  } catch (error) {
+    repoList.innerHTML = `
+      <a class="repo-item" href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">
+        <h4>GitHub Projects</h4>
+        <p>Explore backend APIs, AI infrastructure, automation, and full-stack product experiments.</p>
+        <span class="repo-meta"><span>Open GitHub profile</span></span>
+      </a>
+    `;
+  }
+}
+
+loadGitHubRepos();
