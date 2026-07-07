@@ -1,65 +1,83 @@
-const glow = document.querySelector(".cursor-glow");
+const sectionLinks = [...document.querySelectorAll(".nav-links a")];
+const sections = sectionLinks
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+const backToTop = document.querySelector(".back-to-top");
 
-window.addEventListener("pointermove", (event) => {
-  document.documentElement.style.setProperty("--glow-x", `${event.clientX}px`);
-  document.documentElement.style.setProperty("--glow-y", `${event.clientY}px`);
-});
-
-function updateScrollProgress() {
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const percent = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
-  document.documentElement.style.setProperty("--scroll-progress", `${percent}%`);
+function updateProgress() {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const percent = max > 0 ? (window.scrollY / max) * 100 : 0;
+  document.documentElement.style.setProperty("--progress", `${percent}%`);
+  backToTop.classList.toggle("visible", window.scrollY > 700);
 }
 
-window.addEventListener("scroll", updateScrollProgress, { passive: true });
-updateScrollProgress();
+window.addEventListener("scroll", updateProgress, { passive: true });
+updateProgress();
 
-const observer = new IntersectionObserver(
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+        revealObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.16 }
+  { threshold: 0.14 }
 );
 
-document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
 
-document.querySelectorAll(".metrics strong").forEach((metric) => {
-  const original = metric.textContent.trim();
-  const value = Number.parseFloat(original.replace(/[^0-9.]/g, ""));
-  if (Number.isNaN(value)) return;
+const navObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      sectionLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+      });
+    });
+  },
+  { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
+);
 
-  const suffix = original.replace(/[0-9.]/g, "");
-  let started = false;
-  const counterObserver = new IntersectionObserver(
-    (entries) => {
-      if (!entries.some((entry) => entry.isIntersecting) || started) return;
-      started = true;
-      const startedAt = performance.now();
-      const duration = 950;
+sections.forEach((section) => navObserver.observe(section));
+
+const counterObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const element = entry.target;
+      const target = Number.parseFloat(element.dataset.count);
+      const suffix = element.dataset.suffix || "";
+      const start = performance.now();
+      const duration = 900;
 
       function tick(now) {
-        const progress = Math.min((now - startedAt) / duration, 1);
+        const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
-        const current = value * eased;
-        const formatted = Number.isInteger(value) ? Math.round(current) : current.toFixed(1);
-        metric.textContent = `${formatted}${suffix}`;
+        const current = target * eased;
+        let value = target >= 1000 ? Math.round(current).toLocaleString() : current.toFixed(target % 1 ? 1 : 0);
+        element.textContent = `${value}${suffix}`;
         if (progress < 1) requestAnimationFrame(tick);
       }
 
       requestAnimationFrame(tick);
-      counterObserver.disconnect();
-    },
-    { threshold: 0.4 }
-  );
+      counterObserver.unobserve(element);
+    });
+  },
+  { threshold: 0.6 }
+);
 
-  counterObserver.observe(metric);
+document.querySelectorAll("[data-count]").forEach((element) => counterObserver.observe(element));
+
+document.querySelectorAll("[data-expand]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest("[data-project]");
+    card.classList.toggle("expanded");
+    button.textContent = card.classList.contains("expanded") ? "Collapse" : "Expand";
+  });
 });
 
-if (!window.matchMedia("(pointer: fine)").matches && glow) {
-  glow.remove();
-}
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

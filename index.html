@@ -3,11 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#070a12" />
     <meta
       name="description"
-      content="Portfolio of Sujith Kumar Reddy, a backend and Agentic AI engineer building scalable APIs, distributed systems, and AI products with production discipline."
+      content="Sujith Kumar Reddy is a Senior Backend and AI Engineer building production AI systems, distributed backend platforms, cloud-native applications, and LLM-powered products that scale."
     />
-    <title>Sujith Kumar Reddy | Backend & Agentic AI Engineer</title>
+    <meta property="og:title" content="Sujith Kumar Reddy | Senior Backend & AI Engineer" />
+    <meta
+      property="og:description"
+      content="Production backend engineering, Agentic AI, distributed systems, cloud infrastructure, and measurable engineering impact."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sujithreddyp0123.github.io/Portfolio/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Sujith Kumar Reddy | Senior Backend & AI Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,293 +26,410 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="cursor-glow" aria-hidden="true"></div>
-    <div class="scroll-progress" aria-hidden="true"></div>
-
+    <div class="progress" aria-hidden="true"></div>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Sujith Kumar Reddy home">
-        <span>SR</span>
-      </a>
+      <a class="brand" href="#home" aria-label="Go to home">SR</a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#impact">Impact</a>
-        <a href="#agentic-ai">Agentic AI</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#github">GitHub</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="nav-action" href="mailto:sujithreddyp0123@gmail.com">Email me</a>
+      <a class="nav-cta" href="assets/sujith-kumar-reddy-resume.pdf" download>Resume</a>
     </header>
 
-    <main id="top">
-      <section class="hero">
-        <img class="hero-art" src="assets/hero-throne.png" alt="Dark fantasy technology throne room artwork" />
-        <div class="hero-overlay"></div>
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="sigil-orbit reveal" aria-hidden="true">
-          <span class="orbit-ring"></span>
-          <span class="agent-node node-one">LLM</span>
-          <span class="agent-node node-two">API</span>
-          <span class="agent-node node-three">RAG</span>
-          <span class="agent-node node-four">Eval</span>
-          <span class="agent-core">Agentic AI</span>
+    <main>
+      <section class="hero section-shell" id="home">
+        <div class="hero-bg" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
         </div>
-        <div class="hero-content reveal">
-          <p class="eyebrow">Backend Systems &bull; Agentic AI &bull; Cloud Kingdoms</p>
-          <h1>Sujith Kumar Reddy</h1>
-          <div class="role-marquee" aria-label="Professional focus">
-            <span>Backend Architect</span>
-            <span>Agentic AI Builder</span>
-            <span>Distributed Systems</span>
-            <span>LLM Evaluation</span>
-          </div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Production AI systems • Distributed backend platforms</p>
+          <h1>Senior Backend & AI Engineer</h1>
           <p class="hero-subtitle">
-            Lead software engineer forging production-grade APIs, distributed event pipelines, and agentic AI systems
-            that reason, orchestrate tools, and hold the line under real traffic.
+            Building production AI systems, distributed backend platforms, cloud-native applications, and LLM-powered
+            products that scale.
           </p>
+          <div class="badge-row" aria-label="Core skills">
+            <span>6+ Years Experience</span>
+            <span>Python</span>
+            <span>Java</span>
+            <span>FastAPI</span>
+            <span>AWS</span>
+            <span>Distributed Systems</span>
+            <span>LLMs</span>
+            <span>LangGraph</span>
+            <span>Kafka</span>
+            <span>PostgreSQL</span>
+          </div>
           <div class="hero-actions">
             <a class="button primary" href="#projects">View Projects</a>
-            <a class="button secondary" href="#agentic-ai">Agentic AI Work</a>
+            <a class="button secondary" href="assets/sujith-kumar-reddy-resume.pdf" download>Download Resume</a>
+            <a class="button outline" href="#contact">Contact Me</a>
           </div>
-          <div class="hero-meta" aria-label="Professional highlights">
-            <span>6.5+ years</span>
-            <span>10K+ daily requests</span>
-            <span>$2B+ daily transaction volume</span>
-            <span>Agentic AI workflows</span>
+        </div>
+        <div class="architecture-hero reveal" aria-label="Animated backend architecture illustration">
+          <div class="arch-node source">React</div>
+          <div class="arch-node gateway">API Gateway</div>
+          <div class="arch-node service">FastAPI</div>
+          <div class="arch-node stream">Kafka</div>
+          <div class="arch-node ai">OpenAI / Claude</div>
+          <div class="arch-node data">PostgreSQL</div>
+          <svg viewBox="0 0 520 420" role="img" aria-label="Backend architecture flow diagram">
+            <path class="flow flow-one" d="M92 72 C190 92, 220 124, 260 168 S352 230, 430 250" />
+            <path class="flow flow-two" d="M92 72 C132 190, 180 244, 260 278 S366 318, 430 250" />
+            <path class="flow flow-three" d="M260 168 C298 142, 338 126, 422 118" />
+            <path class="flow flow-four" d="M260 278 C315 306, 356 322, 430 338" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="section-shell split reveal" id="about">
+        <div>
+          <p class="section-kicker">About</p>
+          <h2>Backend depth with practical AI infrastructure instincts.</h2>
+        </div>
+        <div class="prose">
+          <p>
+            I build production backend systems where reliability, latency, data modeling, and business outcomes matter.
+            My work spans Python, Java, FastAPI, Spring Boot, AWS, Kafka, PostgreSQL, Redis, Docker, and Kubernetes.
+          </p>
+          <p>
+            On the AI side, I design LLM-powered systems with LangChain, LangGraph, MCP-style tool orchestration, OpenAI,
+            Claude, evaluation harnesses, and cost controls. I focus on systems that solve business problems, not demos
+            that collapse under production traffic.
+          </p>
+        </div>
+      </section>
+
+      <section class="metrics section-shell reveal" aria-label="Engineering metrics">
+        <article><strong data-count="6" data-suffix="+">0</strong><span>Years Experience</span></article>
+        <article><strong data-count="50" data-suffix="+">0</strong><span>APIs Built</span></article>
+        <article><strong data-count="99.9" data-suffix="%">0</strong><span>Availability Targets</span></article>
+        <article><strong data-count="40" data-suffix="%">0</strong><span>Faster Deployments</span></article>
+        <article><strong data-count="35" data-suffix="%">0</strong><span>Lower API Latency</span></article>
+        <article><strong data-count="1000000" data-suffix="+">0</strong><span>Events Processed</span></article>
+      </section>
+
+      <section class="section-shell reveal" id="experience">
+        <div class="section-heading">
+          <p class="section-kicker">Experience</p>
+          <h2>Production engineering across AI, enterprise, finance, and banking.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="timeline-dot"></div>
+            <span class="company-mark">S</span>
+            <div>
+              <p class="timeline-date">June 2025 - Present</p>
+              <h3>Lead Software Engineer <span>Sona AI</span></h3>
+              <p>
+                Owned GraphQL and REST API design, Kafka pipelines, Terraform-backed CI/CD, observability dashboards, and
+                LLM evaluation infrastructure for a SaaS platform serving 10K+ daily requests.
+              </p>
+              <div class="impact-list">
+                <span>70% backend latency reduction</span>
+                <span>99.9% uptime through 3x traffic growth</span>
+                <span>30% LLM cost reduction</span>
+              </div>
+              <div class="tech-line">TypeScript, GraphQL, REST, Kafka, Terraform, GitHub Actions, OpenAI, Claude</div>
+            </div>
+          </article>
+          <article class="timeline-card">
+            <div class="timeline-dot"></div>
+            <span class="company-mark">HP</span>
+            <div>
+              <p class="timeline-date">Aug 2021 - Dec 2022</p>
+              <h3>Senior Software Engineer <span>HP</span></h3>
+              <p>
+                Built Spring Boot microservices for firmware automation across global device workflows, optimized
+                PostgreSQL workloads, and shipped AWS EKS deployments with secure rollout practices.
+              </p>
+              <div class="impact-list">
+                <span>30% reliability improvement</span>
+                <span>35% deployment lead-time reduction</span>
+                <span>20% fewer integration bugs</span>
+              </div>
+              <div class="tech-line">Java, Spring Boot, PostgreSQL, AWS EKS, Kubernetes, Helm, Prometheus, Grafana</div>
+            </div>
+          </article>
+          <article class="timeline-card">
+            <div class="timeline-dot"></div>
+            <span class="company-mark">R</span>
+            <div>
+              <p class="timeline-date">June 2019 - Aug 2021</p>
+              <h3>Senior Software Engineer <span>RimeSoft</span></h3>
+              <p>
+                Engineered payment and reconciliation microservices for Moody's financial platform with exactly-once Kafka
+                processing and real-time data delivery.
+              </p>
+              <div class="impact-list">
+                <span>$2B+ daily transaction volume</span>
+                <span>25% throughput improvement</span>
+                <span>40% faster deployment cycles</span>
+              </div>
+              <div class="tech-line">Java, Python, Kotlin, Spring Boot, Kafka, Spark Streaming, Kinesis, Redis</div>
+            </div>
+          </article>
+          <article class="timeline-card">
+            <div class="timeline-dot"></div>
+            <span class="company-mark">G</span>
+            <div>
+              <p class="timeline-date">Jan 2018 - June 2019</p>
+              <h3>Software Engineer <span>Grepthor</span></h3>
+              <p>
+                Delivered secure banking workflows with FastAPI services, C++ performance modules, OAuth2/JWT
+                authentication, Kafka/Flink ingestion, and Terraform-backed Kubernetes releases.
+              </p>
+              <div class="impact-list">
+                <span>1M+ banking customers supported</span>
+                <span>40% response-time reduction</span>
+                <span>30% lower release effort</span>
+              </div>
+              <div class="tech-line">Python, FastAPI, C++, MySQL, Kafka, Flink, Jenkins, Terraform, Kubernetes</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell reveal" id="projects">
+        <div class="section-heading">
+          <p class="section-kicker">Projects</p>
+          <h2>AI and backend systems designed around architecture, tradeoffs, and measurable value.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-project>
+            <div class="mini-diagram"><span>Client</span><i></i><span>Router</span><i></i><span>LLMs</span></div>
+            <p class="project-type">AI Infrastructure</p>
+            <h3>AI Inference Gateway</h3>
+            <p>Routes AI requests intelligently between local models and cloud LLMs to reduce inference costs.</p>
+            <div class="impact-list"><span>70% inference cost reduction</span><span>Policy-based routing</span></div>
+            <div class="tech-line">FastAPI, Ollama, OpenAI, Redis, Docker</div>
+            <div class="project-actions">
+              <a href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">GitHub</a>
+              <button type="button" data-expand>Expand</button>
+            </div>
+            <div class="project-expanded">
+              <p><strong>Problem:</strong> Cloud-only inference is expensive and hard to route by latency or task type.</p>
+              <p><strong>Solution:</strong> Gateway layer that chooses local or cloud models using request policy, fallback, caching, and metrics.</p>
+              <p><strong>Tradeoffs:</strong> Balances local model quality against cost, latency, and reliability.</p>
+            </div>
+          </article>
+          <article class="project-card" data-project>
+            <div class="mini-diagram"><span>Jobs</span><i></i><span>Agent</span><i></i><span>Tracker</span></div>
+            <p class="project-type">Career Automation</p>
+            <h3>CareerOps AI</h3>
+            <p>AI-powered career assistant for job discovery, resume optimization, application automation, and interview tracking.</p>
+            <div class="impact-list"><span>Application workflow automation</span><span>Resume-job matching</span></div>
+            <div class="tech-line">Python, FastAPI, LLMs, PostgreSQL, React</div>
+            <div class="project-actions">
+              <a href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">GitHub</a>
+              <button type="button" data-expand>Expand</button>
+            </div>
+            <div class="project-expanded">
+              <p><strong>Architecture:</strong> Job ingestion, resume parser, LLM optimization loop, status tracker, and interview pipeline.</p>
+              <p><strong>Scalability:</strong> Separates scraping, enrichment, scoring, and user-facing APIs.</p>
+            </div>
+          </article>
+          <article class="project-card" data-project>
+            <div class="mini-diagram"><span>Persona</span><i></i><span>Prompt</span><i></i><span>Content</span></div>
+            <p class="project-type">Production AI</p>
+            <h3>Persona Engine</h3>
+            <p>Production AI system generating personalized content using GPT-4 and Claude with latency and usage controls.</p>
+            <div class="impact-list"><span>Personalization at scale</span><span>Lower manual processing</span></div>
+            <div class="tech-line">OpenAI, Claude, FastAPI, Redis, Observability</div>
+            <div class="project-actions">
+              <a href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">GitHub</a>
+              <button type="button" data-expand>Expand</button>
+            </div>
+            <div class="project-expanded">
+              <p><strong>Solution:</strong> Structured prompt contracts, provider abstraction, response validation, and model evaluation loop.</p>
+              <p><strong>Challenge:</strong> Keeping output quality stable while reducing latency and provider cost.</p>
+            </div>
+          </article>
+          <article class="project-card" data-project>
+            <div class="mini-diagram"><span>User</span><i></i><span>LangGraph</span><i></i><span>Feedback</span></div>
+            <p class="project-type">Agentic AI</p>
+            <h3>Interview Agent</h3>
+            <p>Multi-agent interview simulator using LangGraph for role-specific questioning, evaluation, and feedback loops.</p>
+            <div class="impact-list"><span>Agent workflow orchestration</span><span>Structured scoring</span></div>
+            <div class="tech-line">LangGraph, Python, LLMs, RAG, FastAPI</div>
+            <div class="project-actions">
+              <a href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">GitHub</a>
+              <button type="button" data-expand>Expand</button>
+            </div>
+            <div class="project-expanded">
+              <p><strong>Architecture:</strong> Interviewer, evaluator, coaching, and memory nodes connected through a graph workflow.</p>
+              <p><strong>Lessons:</strong> Explicit state and eval criteria are essential for reliable agent behavior.</p>
+            </div>
+          </article>
+          <article class="project-card" data-project>
+            <div class="mini-diagram"><span>Photo</span><i></i><span>Vision</span><i></i><span>Advice</span></div>
+            <p class="project-type">Applied AI</p>
+            <h3>AgriAI</h3>
+            <p>Modern AI platform for agriculture with crop photo diagnosis, fertilizer advice, weather-aware recommendations, and season tracking.</p>
+            <div class="impact-list"><span>Telugu-first experience</span><span>Vision-assisted recommendations</span></div>
+            <div class="tech-line">React, FastAPI, SQLite, Claude Vision, Render</div>
+            <div class="project-actions">
+              <a href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">GitHub</a>
+              <button type="button" data-expand>Expand</button>
+            </div>
+            <div class="project-expanded">
+              <p><strong>Problem:</strong> Farmers need localized, practical crop support that works in their language.</p>
+              <p><strong>Solution:</strong> Photo diagnosis, weather context, crop season tracking, and recommendation workflows.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell reveal" id="architecture">
+        <div class="section-heading">
+          <p class="section-kicker">Architecture</p>
+          <h2>Systems thinking from frontend request to model response, cache, stream, and storage.</h2>
+        </div>
+        <div class="architecture-grid">
+          <div class="diagram-card">
+            <h3>AI Platform Flow</h3>
+            <svg class="stack-diagram" viewBox="0 0 780 220" role="img" aria-label="AI platform architecture diagram">
+              <g>
+                <rect x="20" y="75" width="110" height="52" rx="12" /><text x="75" y="106">React</text>
+                <path d="M135 101 H185" />
+                <rect x="190" y="75" width="120" height="52" rx="12" /><text x="250" y="106">API Gateway</text>
+                <path d="M315 101 H365" />
+                <rect x="370" y="75" width="110" height="52" rx="12" /><text x="425" y="106">FastAPI</text>
+                <path d="M485 101 H535" />
+                <rect x="540" y="28" width="110" height="52" rx="12" /><text x="595" y="59">Kafka</text>
+                <rect x="540" y="122" width="110" height="52" rx="12" /><text x="595" y="153">Redis</text>
+                <path d="M655 54 H710" /><path d="M655 148 H710" />
+                <rect x="715" y="28" width="46" height="52" rx="12" /><text x="738" y="59">LLM</text>
+                <rect x="715" y="122" width="46" height="52" rx="12" /><text x="738" y="153">SQL</text>
+              </g>
+            </svg>
+          </div>
+          <div class="diagram-card">
+            <h3>Observability Loop</h3>
+            <svg class="stack-diagram" viewBox="0 0 780 220" role="img" aria-label="Observability architecture diagram">
+              <g>
+                <rect x="20" y="75" width="120" height="52" rx="12" /><text x="80" y="106">Backend</text>
+                <path d="M145 101 H205" />
+                <rect x="210" y="75" width="110" height="52" rx="12" /><text x="265" y="106">Metrics</text>
+                <path d="M325 101 H385" />
+                <rect x="390" y="28" width="120" height="52" rx="12" /><text x="450" y="59">Prometheus</text>
+                <rect x="390" y="122" width="120" height="52" rx="12" /><text x="450" y="153">CloudWatch</text>
+                <path d="M515 54 H585" /><path d="M515 148 H585" />
+                <rect x="590" y="75" width="120" height="52" rx="12" /><text x="650" y="106">Grafana</text>
+              </g>
+            </svg>
           </div>
         </div>
       </section>
 
-      <section class="section intro reveal" id="impact">
+      <section class="section-shell reveal" id="skills">
+        <div class="section-heading">
+          <p class="section-kicker">Tech Stack</p>
+          <h2>Organized around delivery: APIs, AI, cloud, data, messaging, and observability.</h2>
+        </div>
+        <div class="skills-grid">
+          <article><h3>Languages</h3><p>Python, Java, JavaScript, TypeScript, Go</p></article>
+          <article><h3>Backend</h3><p>FastAPI, Spring Boot, Node.js, Express, REST, GraphQL</p></article>
+          <article><h3>AI</h3><p>OpenAI, Claude, LangChain, LangGraph, RAG, Prompt Engineering, MCP, Vector Databases</p></article>
+          <article><h3>Cloud</h3><p>AWS, Docker, Kubernetes, Terraform, GitHub Actions</p></article>
+          <article><h3>Messaging</h3><p>Kafka, RabbitMQ, SQS</p></article>
+          <article><h3>Databases</h3><p>PostgreSQL, Redis, MongoDB, DynamoDB, MySQL</p></article>
+          <article><h3>Monitoring</h3><p>Grafana, Prometheus, CloudWatch, ELK</p></article>
+        </div>
+      </section>
+
+      <section class="section-shell reveal">
+        <div class="section-heading">
+          <p class="section-kicker">Production Engineering</p>
+          <h2>Practical capabilities needed to keep systems useful after launch.</h2>
+        </div>
+        <div class="production-grid">
+          <span>Production APIs</span><span>Distributed Systems</span><span>Kafka Streaming</span><span>LLM Integrations</span>
+          <span>Authentication</span><span>OAuth</span><span>JWT</span><span>CI/CD</span><span>Docker</span><span>Kubernetes</span>
+          <span>Monitoring</span><span>Observability</span><span>Caching</span><span>Rate Limiting</span><span>Security</span>
+          <span>High Availability</span><span>Scalable APIs</span><span>Microservices</span><span>Prompt Engineering</span><span>Agentic AI</span>
+        </div>
+      </section>
+
+      <section class="section-shell reveal" id="github">
+        <div class="section-heading">
+          <p class="section-kicker">GitHub</p>
+          <h2>Public work, experiments, and systems thinking in code.</h2>
+        </div>
+        <div class="github-grid">
+          <a class="github-card profile" href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">
+            <h3>@sujithreddyp0123</h3>
+            <p>Backend systems, AI products, automation, and production-focused engineering projects.</p>
+          </a>
+          <div class="github-card graph">
+            <h3>Contribution Graph</h3>
+            <img
+              src="https://ghchart.rshah.org/27d5ff/sujithreddyp0123"
+              alt="GitHub contribution graph for sujithreddyp0123"
+              loading="lazy"
+            />
+          </div>
+          <a class="github-card" href="https://github.com/sujithreddyp0123/Portfolio" target="_blank" rel="noreferrer">
+            <h3>Portfolio</h3>
+            <p>Senior Backend + AI Engineer portfolio, built as a fast static site.</p>
+          </a>
+          <a class="github-card" href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">
+            <h3>Pinned Repositories</h3>
+            <p>Explore AI infrastructure, backend APIs, and full-stack product experiments.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-shell testimonials reveal">
         <div>
-          <p class="section-kicker">The Realm</p>
-          <h2>Reliable backend and Agentic AI platforms built for scale, speed, and control.</h2>
+          <p class="section-kicker">Recommendations</p>
+          <h2>Placeholder for future recommendations.</h2>
         </div>
         <p>
-          I specialize in API design, domain modeling, Kafka-based event processing, database performance, and cloud-native
-          services. I also build AI systems with evaluation loops, tool orchestration, model benchmarking, and practical
-          production guardrails.
+          Add recommendations from managers, senior engineers, product partners, or clients here. The section is ready
+          for concise quotes that reinforce ownership, system design, execution, and production reliability.
         </p>
       </section>
 
-      <section class="metrics reveal" aria-label="Career impact metrics">
-        <article>
-          <strong>70%</strong>
-          <span>Backend latency reduction through API, caching, and query optimization.</span>
-        </article>
-        <article>
-          <strong>99.9%</strong>
-          <span>Uptime sustained through traffic growth with decoupled event pipelines.</span>
-        </article>
-        <article>
-          <strong>40%</strong>
-          <span>Deployment cycle reduction using Terraform and parallel CI/CD pipelines.</span>
-        </article>
-        <article>
-          <strong>30%</strong>
-          <span>LLM cost reduction through production evaluation and provider benchmarking.</span>
-        </article>
-      </section>
-
-      <section class="agentic-section reveal" id="agentic-ai">
-        <div class="agentic-copy">
-          <p class="section-kicker">Agentic AI</p>
-          <h2>Autonomous workflows with contracts, memory, tools, and guardrails.</h2>
-          <p>
-            I approach agentic systems like mission-critical backend systems: clear contracts, observability, latency
-            budgets, retrieval boundaries, regression tests, and cost controls. The result is useful automation that can
-            survive real users.
-          </p>
-        </div>
-        <div class="agentic-console" aria-label="Agentic AI workflow animation">
-          <div class="console-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="console-line active">
-            <span>01</span>
-            <strong>Intent router</strong>
-            <em>classifies request and selects workflow</em>
-          </div>
-          <div class="console-line">
-            <span>02</span>
-            <strong>Tool planner</strong>
-            <em>chooses APIs, retrieval, and validations</em>
-          </div>
-          <div class="console-line">
-            <span>03</span>
-            <strong>Execution loop</strong>
-            <em>runs actions with structured outputs</em>
-          </div>
-          <div class="console-line">
-            <span>04</span>
-            <strong>Eval harness</strong>
-            <em>checks quality, latency, and cost</em>
-          </div>
-          <div class="pulse-track" aria-hidden="true">
-            <i></i>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal">
+      <section class="section-shell contact reveal" id="contact">
         <div>
-          <p class="section-kicker">Core Stack</p>
-          <h2>Tools I reach for when systems need to scale.</h2>
+          <p class="section-kicker">Contact</p>
+          <h2>Let’s talk about backend platforms, AI infrastructure, or production-grade LLM systems.</h2>
+          <div class="contact-links">
+            <a href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/sujithponnaluru" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:sujithreddyp0123@gmail.com">Email</a>
+            <a href="assets/sujith-kumar-reddy-resume.pdf" download>Resume</a>
+          </div>
         </div>
-        <div class="skill-cloud" aria-label="Technical skills">
-          <span>Python</span>
-          <span>Java</span>
-          <span>TypeScript</span>
-          <span>Go</span>
-          <span>FastAPI</span>
-          <span>Spring Boot</span>
-          <span>GraphQL</span>
-          <span>Kafka</span>
-          <span>PostgreSQL</span>
-          <span>Redis</span>
-          <span>DynamoDB</span>
-          <span>AWS</span>
-          <span>Kubernetes</span>
-          <span>Docker</span>
-          <span>Terraform</span>
-          <span>Prometheus</span>
-          <span>Grafana</span>
-          <span>LLM Evals</span>
-          <span>Agent Workflows</span>
-          <span>RAG</span>
-        </div>
-      </section>
-
-      <section class="section experience reveal" id="experience">
-        <div>
-          <p class="section-kicker">Experience</p>
-          <h2>Production systems across AI, enterprise, finance, and banking.</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-date">Jun 2025 - Present</div>
-            <div class="timeline-card">
-              <h3>Lead Software Engineer <span>Sona AI</span></h3>
-              <p>
-                Designed GraphQL and REST APIs for a SaaS platform serving 10K+ daily requests, built Kafka pipelines for
-                zero-downtime deployments, and shipped an LLM evaluation harness for agentic workflows that reduced model
-                costs by roughly 30%.
-              </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-date">Aug 2021 - Dec 2022</div>
-            <div class="timeline-card">
-              <h3>Senior Software Engineer <span>HP</span></h3>
-              <p>
-                Engineered Spring Boot microservices for HP's global firmware automation platform, optimized PostgreSQL
-                workloads, and deployed Kubernetes services on AWS EKS with zero-downtime rollouts.
-              </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-date">Jun 2019 - Aug 2021</div>
-            <div class="timeline-card">
-              <h3>Software Engineer <span>Rime Soft Pvt Ltd</span></h3>
-              <p>
-                Built Java, Kotlin, and Python services for Moody's payment and reconciliation platform processing $2B+
-                in daily transaction volume with exactly-once Kafka delivery.
-              </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-date">Jan 2018 - Jun 2019</div>
-            <div class="timeline-card">
-              <h3>Software Engineer <span>Grepthor Technologies</span></h3>
-              <p>
-                Built FastAPI services and C++ performance modules for HDFC Bank's digital platform, securing workflows
-                with OAuth2, JWT validation, rate limiting, and audit logging.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section projects reveal" id="projects">
-        <div>
-          <p class="section-kicker">Projects</p>
-          <h2>Side projects with real product instincts.</h2>
-        </div>
-        <div class="project-grid">
-          <article class="project-card featured">
-            <div class="project-topline">Agentic AI Sports Analytics</div>
-            <h3>StatRush</h3>
-            <p>
-              Full-stack SaaS analytics platform with React/Vite, FastAPI, PostgreSQL, Redis, and ML ensembles for NBA
-              prop analysis, live odds integration, confidence scoring, and agent-assisted edge discovery.
-            </p>
-            <div class="project-tags">
-              <span>FastAPI</span>
-              <span>React</span>
-              <span>XGBoost</span>
-              <span>Redis</span>
-              <span>Agentic AI</span>
-            </div>
-            <a href="https://statrush.vercel.app" target="_blank" rel="noreferrer">Open project</a>
-          </article>
-          <article class="project-card">
-            <div class="project-topline">AI Farming Assistant</div>
-            <h3>Agri AI</h3>
-            <p>
-              Telugu-first farming assistant for Andhra Pradesh and Telangana with crop photo diagnosis, fertilizer
-              advice, weather-aware recommendations, and season tracking.
-            </p>
-            <div class="project-tags">
-              <span>React</span>
-              <span>FastAPI</span>
-              <span>SQLite</span>
-              <span>Claude Vision</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section education reveal">
-        <div>
-          <p class="section-kicker">Education & Certifications</p>
-          <h2>Formal foundation, practical delivery.</h2>
-        </div>
-        <div class="education-grid">
-          <article>
-            <h3>University of Houston-Clear Lake</h3>
-            <p>Master's in Information Systems, 2023 - 2024</p>
-          </article>
-          <article>
-            <h3>Anna University</h3>
-            <p>Bachelor's in Computer Science, 2014 - 2018</p>
-          </article>
-          <article>
-            <h3>AWS Certified Developer - Associate</h3>
-            <p>Issued Apr 2025, expires Apr 2028</p>
-          </article>
-          <article>
-            <h3>Certified ScrumMaster</h3>
-            <p>Agile delivery and engineering collaboration</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="contact reveal" id="contact">
-        <p class="section-kicker">Contact</p>
-        <h2>Let's build something fast, useful, agentic, and production-ready.</h2>
-        <div class="contact-actions">
-          <a class="button primary" href="mailto:sujithreddyp0123@gmail.com">sujithreddyp0123@gmail.com</a>
-          <a class="button secondary" href="https://linkedin.com/in/sujithponnaluru" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a class="button secondary" href="https://github.com/sujithreddyp0123" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        </div>
+        <form class="contact-form" action="mailto:sujithreddyp0123@gmail.com" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Message</button>
+        </form>
       </section>
     </main>
 
+    <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+    <footer>
+      <p>Built as a fast static portfolio. Ready to port to Next.js, React, TypeScript, Tailwind, and Framer Motion.</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
